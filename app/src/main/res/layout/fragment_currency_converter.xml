@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_padding"
+    tools:context=".presentation.CurrencyConverterFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fromLayout"
+        style="@style/TextInputDropdownLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:hint="@string/from"
+        android:textAlignment="center"
+        app:hintEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide1"
+        app:layout_constraintWidth_percent="0.4">
+
+        <AutoCompleteTextView
+            android:id="@+id/fromCountries"
+            style="@style/TextMediumFont18"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dropDownHeight="wrap_content"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:inputType="none"
+
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/toLayout"
+        style="@style/TextInputDropdownLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:hint="@string/to"
+        android:textAlignment="center"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide1"
+        app:layout_constraintWidth_percent="0.4">
+
+        <AutoCompleteTextView
+            android:id="@+id/toCountries"
+            style="@style/TextMediumFont18"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dropDownHeight="wrap_content"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:inputType="none"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fromAmountLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen12"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/fromLayout"
+        app:layout_constraintStart_toStartOf="@+id/fromLayout"
+        app:layout_constraintTop_toBottomOf="@+id/fromLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFromAmount"
+            style="@style/TextMediumFont18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/from_amount"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/toAmountLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen12"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/toLayout"
+        app:layout_constraintStart_toStartOf="@+id/toLayout"
+        app:layout_constraintTop_toBottomOf="@+id/toLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etToAmount"
+            style="@style/TextMediumFont18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/to_amount"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDetails"
+        style="@style/PrimaryButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen30"
+        android:layout_marginTop="@dimen/dimen40"
+        android:text="@string/details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromAmountLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
