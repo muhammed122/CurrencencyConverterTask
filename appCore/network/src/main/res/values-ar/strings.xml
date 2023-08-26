@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_internet_connection">لا يوجد إتصال بشبكة الانترنت</string>
+    <string name="error_server">نواجه بعض المشاكل التقنيه. يرجي المحاولة لاحقا</string>
+    <string name="error_client">يرجي المحاولة لاحقا</string>
+</resources>

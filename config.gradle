@@ -1,0 +1,20 @@
+ext {
+    applicationId = "com.example.currencyconvertertask"
+    compileSdk = 33
+    minSdk = 24
+    versionCode = 1
+    versionName = "1.0.0"
+    testRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+    kotlin_version = '1.7.0'
+    kotlin_std_version = '1.6.21'
+    koin_architecture_version = "0.8.2"
+    koin_version = '2.0.1'
+    hilt_version = '2.40'
+    nav_version = "2.5.3"
+
+    // Build Types
+    debugBuildType = "debug"
+    releaseBuildType = "release"
+
+}

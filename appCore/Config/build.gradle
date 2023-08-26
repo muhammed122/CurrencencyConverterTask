@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+
+}
+
+apply from: "../../config.gradle"
+
+
+android {
+
+    namespace 'com.example.currencyconvertertask.config'
+
+    compileSdk = rootProject.ext.get("compileSdk") as Integer
+
+    defaultConfig {
+        minSdk = rootProject.ext.get("minSdk") as Integer
+        buildConfigField "String", "IS_DEBUG", "\"${rootProject.ext.get("debugBuildType")}\""
+        buildConfigField "String", "RELEASE", "\"${rootProject.ext.get("releaseBuildType")}\""
+    }
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+secrets {
+    defaultPropertiesFileName = "secrets.defaults.properties"
+}
+
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
