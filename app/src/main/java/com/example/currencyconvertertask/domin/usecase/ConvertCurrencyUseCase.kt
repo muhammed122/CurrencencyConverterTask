@@ -15,6 +15,8 @@ class ConvertCurrencyUseCase @Inject constructor(
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher,
 ) : FlowUseCase<ConvertCurrencyRequest, CurrencyConverterModel>(ioDispatcher) {
     override fun execute(parameters: ConvertCurrencyRequest): Flow<CurrencyConverterModel> = flow {
+
+
         emit(repository.convertCurrency(parameters))
     }
 }

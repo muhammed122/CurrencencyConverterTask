@@ -2,9 +2,11 @@ package com.example.currencyconvertertask.network.network
 
 import com.example.currencyconvertertask.network.R
 import com.example.currencyconvertertask.network.model.GeneralErrorNetworkModel
-import com.qpn.kamashka.utils.ApiException
+import com.example.currencyconvertertask.network.model.GeneralResponse
+import com.example.currencyconvertertask.network.utils.ApiException
 import com.example.currencyconvertertask.utils.resource_provider.ResourceProvider
 import okhttp3.ResponseBody
+import okhttp3.ResponseBody.Companion.toResponseBody
 import retrofit2.*
 import java.net.ConnectException
 import java.net.HttpURLConnection
@@ -20,9 +22,12 @@ internal class NetworkResponseDelegate<T : Any>(
 
     override fun enqueue(callback: Callback<T>) = delegate.enqueue(object : Callback<T> {
         override fun onResponse(call: Call<T>, response: Response<T>) {
-            if (response.isSuccessful) callback.onResponse(
-                this@NetworkResponseDelegate, Response.success(response.body())
+            if (response.isSuccessful && response.body() is GeneralResponse &&
+                (response.body() as GeneralResponse).success == true
             )
+                callback.onResponse(
+                    this@NetworkResponseDelegate, Response.success(response.body())
+                )
             else {
                 callback.onFailure(
                     this@NetworkResponseDelegate, handleApiException(
@@ -45,7 +50,8 @@ internal class NetworkResponseDelegate<T : Any>(
         -> {
             ApiException.NoInternetConnection(
                 message = resourceProvider.getText(R.string.no_internet_connection),
-                throwable = ex)
+                throwable = ex
+            )
         }
         is HttpException -> {
             handleApiException(
@@ -77,8 +83,7 @@ internal class NetworkResponseDelegate<T : Any>(
                     val errorResponse =
                         errorConverter.convert(it)
                     ApiException.ApiError(
-                        errorResponse?.message ?:
-                        resourceProvider.getText(R.string.error_server),
+                        errorResponse?.message ?: resourceProvider.getText(R.string.error_server),
                         errorResponse?.code
                     )
 

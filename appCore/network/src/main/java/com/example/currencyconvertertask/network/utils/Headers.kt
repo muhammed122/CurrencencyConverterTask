@@ -1,4 +1,4 @@
-package com.qpn.kamashka.utils
+package com.example.currencyconvertertask.network.utils
 
 object Headers {
 
@@ -11,6 +11,5 @@ object Headers {
 
     object Values {
         const val ACCEPT_VALUE ="application/json"
-        const val BEARER ="Bearer "
     }
 }

@@ -33,9 +33,9 @@ class CurrencyRepositoryImpl @Inject constructor(
     override suspend fun convertCurrency(request: ConvertCurrencyRequest): CurrencyConverterModel {
         val response = service.convertCurrency(
             accessKey = appConfig.getAPIKey(),
-            from = request.from,
-            to = request.to,
-            amount = request.amount
+            from = request.from ?: "",
+            to = request.to ?: "",
+            amount = request.amount ?: 0.0
         )
 
         return CurrencyConverterModel(

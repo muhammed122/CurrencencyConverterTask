@@ -1,4 +1,4 @@
-package com.qpn.kamashka.utils
+package com.example.currencyconvertertask.network.utils
 
 sealed class ApiException(message: String? = null) : Exception(message) {
 

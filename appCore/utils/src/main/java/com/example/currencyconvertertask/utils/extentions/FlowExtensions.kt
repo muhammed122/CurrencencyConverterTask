@@ -1,6 +1,6 @@
 package com.example.currencyconvertertask.utils.extentions
 
-import com.qpn.kamashka.utils.network.Resource
+import com.example.currencyconvertertask.utils.network.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map

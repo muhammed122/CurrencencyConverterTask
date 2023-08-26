@@ -7,7 +7,7 @@ import com.example.currencyconvertertask.domin.entity.response.CurrencySymbolsMo
 import com.example.currencyconvertertask.domin.usecase.ConvertCurrencyUseCase
 import com.example.currencyconvertertask.domin.usecase.GetAvailableCurrencyUseCase
 import com.example.currencyconvertertask.ui.base.BaseViewModel
-import com.qpn.kamashka.utils.network.Resource
+import com.example.currencyconvertertask.utils.network.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -36,9 +36,14 @@ class CurrencyConverterViewModel @Inject constructor(
 
     private val _convertCurrencyFlow = MutableSharedFlow<Resource<CurrencyConverterModel>>()
     val convertCurrencyFlow get() = _convertCurrencyFlow
-    fun convertCurrency(request: ConvertCurrencyRequest) {
-        convertCurrencyUseCase.invoke(request).onEach {
+
+    private val _request = ConvertCurrencyRequest()
+    fun getCurrencyConverterRequest()=_request
+    fun convertCurrency() {
+        if (_request.amount == null || _request.to == null || _request.from == null)
+            return
+        convertCurrencyUseCase.invoke(_request).onEach {
             _convertCurrencyFlow.emit(it)
-        }
+        }.launchIn(viewModelScope)
     }
 }

@@ -2,7 +2,7 @@ package com.example.currencyconvertertask.ui.base
 
 import androidx.lifecycle.ViewModel
 import com.example.currencyconvertertask.ui.utils.SingleLiveEvent
-import com.qpn.kamashka.utils.network.Resource
+import com.example.currencyconvertertask.utils.network.Resource
 
 open class BaseViewModel : ViewModel() {
 

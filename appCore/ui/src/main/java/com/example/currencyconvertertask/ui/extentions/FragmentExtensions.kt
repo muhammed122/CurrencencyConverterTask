@@ -11,8 +11,8 @@ import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.currencyconvertertask.ui.R
-import com.qpn.kamashka.utils.ApiException
-import com.qpn.kamashka.utils.network.Resource
+import com.example.currencyconvertertask.network.utils.ApiException
+import com.example.currencyconvertertask.utils.network.Resource
 import kotlinx.coroutines.flow.SharedFlow
 
 fun Fragment.handleApiError(

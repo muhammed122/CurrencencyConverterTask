@@ -6,7 +6,7 @@ import com.example.currencyconvertertask.config.EnvironmentConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.example.currencyconvertertask.network.network.adapter.ApiCallAdapterFactory
-import com.qpn.kamashka.utils.Headers
+import com.example.currencyconvertertask.network.utils.Headers
 import com.example.currencyconvertertask.utils.resource_provider.ResourceProvider
 import dagger.Module
 import dagger.Provides

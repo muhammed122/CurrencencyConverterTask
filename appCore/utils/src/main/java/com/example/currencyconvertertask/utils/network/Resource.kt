@@ -1,4 +1,4 @@
-package com.qpn.kamashka.utils.network
+package com.example.currencyconvertertask.utils.network
 
 sealed class Resource<out T> {
 

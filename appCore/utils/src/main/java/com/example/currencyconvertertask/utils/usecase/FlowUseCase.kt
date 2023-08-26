@@ -1,7 +1,7 @@
 package com.example.currencyconvertertask.utils.usecase
 
 import com.example.currencyconvertertask.utils.extentions.obtainOutcome
-import com.qpn.kamashka.utils.network.Resource
+import com.example.currencyconvertertask.utils.network.Resource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
