@@ -61,6 +61,7 @@ dependencies {
     implementation project(":appCore:utils")
     implementation project(":appCore:Config")
     implementation project(":appCore:network")
+    implementation project(":appCore:ui")
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

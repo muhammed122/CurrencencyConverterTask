@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/progressBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_shade_color"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trailingcircular_animDelay="200"
+        app:trailingcircular_animDuration="1200"
+        app:trailingcircular_bigCircleRadius="@dimen/dimen20"
+        app:trailingcircular_dotsColor="@color/color_app_second"
+        app:trailingcircular_dotsRadius="@dimen/dimen5"
+        app:trailingcircular_noOfTrailingDots="5" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loading"
+        android:layout_alignStart="@+id/loading"
+        android:layout_alignEnd="@+id/loading"
+        android:layout_marginTop="@dimen/dimen10"
+        android:gravity="center"
+        android:textSize="@dimen/text_size14"
+        tools:text="test" />
+</RelativeLayout>

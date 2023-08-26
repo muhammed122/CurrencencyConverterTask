@@ -4,7 +4,7 @@ interface EnvironmentConfig {
 
     fun getBaseUrl(): String
 
-    fun getAPI(): String
+    fun getAPIKey(): String
 
 
 }

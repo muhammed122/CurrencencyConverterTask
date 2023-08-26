@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_light_grey"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/no_connection" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen20"
+            android:layout_marginTop="@dimen/dimen3"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/activity_padding"
+            android:text="@string/no_connection_message"
+            android:textColor="@color/color_app_main"
+            android:textSize="@dimen/text_size14"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen40"
+            android:layout_marginTop="@dimen/dimen5"
+            android:gravity="center"
+            android:text="@string/check_connection_message"
+            android:textColor="@color/color_dark_grey"
+            android:textSize="@dimen/text_size14" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_marginEnd="@dimen/dimen8"
+            android:backgroundTint="@color/color_app_second"
+            android:fontFamily=""
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingVertical="@dimen/dimen4"
+            android:stateListAnimator="@null"
+            android:text="@string/reload"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size12"
+            app:cornerRadius="9dp"
+            app:elevation="0dp"
+            app:iconTint="@color/color_app_second" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

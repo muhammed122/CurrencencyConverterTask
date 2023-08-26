@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_app_main</item>
+        <item name="colorPrimaryVariant">@color/color_app_main</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_app_main</item>
+        <item name="colorSecondaryVariant">@color/color_app_main</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <!-- App Font -->
+        <item name="fontFamily">@font/kamashka_regular</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="TextBoldFont14">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/kamashka_semi_bold</item>
+    </style>
+
+    <style name="TextBoldFont16">
+        <item name="android:textSize">@dimen/text_size16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/kamashka_semi_bold</item>
+    </style>
+
+    <style name="TextBoldFont18">
+        <item name="android:textSize">@dimen/text_size18</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/kamashka_semi_bold</item>
+    </style>
+
+    <style name="TextBoldFont20">
+        <item name="android:textSize">@dimen/text_size20</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/kamashka_semi_bold</item>
+    </style>
+
+    <style name="TextBoldFont22">
+        <item name="android:textSize">@dimen/text_size22</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/kamashka_semi_bold</item>
+    </style>
+
+
+    <style name="TextBoldFont30">
+        <item name="android:textSize">@dimen/text_size30</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/kamashka_semi_bold</item>
+    </style>
+
+    <style name="TextMediumFont12">
+        <item name="android:textSize">@dimen/text_size12</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="TextMediumFont14">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="TextMediumFont15">
+        <item name="android:textSize">@dimen/text_size15</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="TextMediumFont16">
+        <item name="android:textSize">@dimen/text_size16</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="TextMediumFont18">
+        <item name="android:textSize">@dimen/text_size18</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="TextMediumFont20">
+        <item name="android:textSize">@dimen/text_size20</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="TextMediumFont22">
+        <item name="android:textSize">@dimen/text_size22</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+
+    <style name="TextRegularFont12">
+        <item name="android:textSize">@dimen/text_size12</item>
+        <item name="fontFamily">@font/kamashka_regular</item>
+    </style>
+
+    <style name="TextRegularFont14">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="fontFamily">@font/kamashka_regular</item>
+    </style>
+
+    <style name="TextRegularFont22">
+        <item name="android:textSize">@dimen/text_size22</item>
+        <item name="fontFamily">@font/kamashka_regular</item>
+    </style>
+
+    <style name="TextMediumFont24">
+        <item name="android:textSize">@dimen/text_size24</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="TextMediumFont30">
+        <item name="android:textSize">@dimen/text_size30</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+    </style>
+
+    <style name="PrimaryButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="background">@color/color_app_second</item>
+        <item name="android:textSize">@dimen/text_size18</item>
+        <item name="fontFamily">@font/kamashka_medium</item>
+        <item name="cornerRadius">@dimen/dimen10</item>
+        <item name="android:padding">@dimen/dimen12</item>
+    </style>
+
+    <style name="alert_dialog_theme" parent="android:style/Theme.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

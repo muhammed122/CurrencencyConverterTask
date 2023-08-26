@@ -8,7 +8,7 @@ class AppEnvironment @Inject constructor() : EnvironmentConfig {
     override fun getBaseUrl(): String = BuildConfig.BASE_URL
 
 
-    override fun getAPI(): String = BuildConfig.API_KEY
+    override fun getAPIKey(): String = BuildConfig.API_KEY
 
 
 }

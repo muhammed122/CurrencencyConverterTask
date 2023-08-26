@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error">Error</string>
+    <string name="no_internet">No internet connection please try again later</string>
+    <string name="retry">Retry</string>
+    <string name="some_error">Some error occurred, try again later</string>
+    <string name="reload">Reload</string>
+    <string name="no_connection_message">No Internet Connection</string>
+    <string name="check_connection_message">Check your internet connection</string>
+    <string name="ok">OK</string>
+
+
+</resources>

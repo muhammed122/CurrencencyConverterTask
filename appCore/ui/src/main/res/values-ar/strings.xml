@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error">خطأ</string>
+    <string name="no_internet">لا يوجد اتصال بالانترنت، الرجاء المحاولة فى وقت اخر</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="some_error">حدث خطأ ما، الرجاء المحاولة فى وقت اخر</string>
+    <string name="ok">حسنا</string>
+
+</resources>

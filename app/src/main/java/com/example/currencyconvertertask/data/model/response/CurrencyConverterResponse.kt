@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class CurrencyConverterResponse(
 	@SerializedName("date") val date: String? = null,
-	@SerializedName("result") val result: Any? = null,
+	@SerializedName("result") val result: Double? = null,
 	@SerializedName("success") val success: Boolean? = null,
 	@SerializedName("query") val query: Query? = null,
 	@SerializedName("historical") val historical: String? = null,
@@ -18,6 +18,6 @@ data class Query(
 )
 
 data class Info(
-	@SerializedName("rate") val rate: Any? = null,
+	@SerializedName("rate") val rate: Double? = null,
 	@SerializedName("timestamp") val timestamp: Int? = null
 )

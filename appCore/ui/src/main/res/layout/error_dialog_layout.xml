@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen13"
+        app:cardCornerRadius="@dimen/dimen10"
+        app:cardElevation="@dimen/dimen4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen30"
+            android:paddingBottom="@dimen/dimen20">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icon_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_error_dialog" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen13"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dimen30"
+                android:textColor="@color/color_dark_grey"
+                style="@style/TextMediumFont18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icon_error"
+                tools:text="Are you sure ?" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen9"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dimen30"
+                android:textColor="@color/black"
+                style="@style/TextMediumFont16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="Are You Sure You Want To Delete Group?" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ok_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:backgroundTint="@color/color_app_second"
+                android:fontFamily="@font/kamashka_medium"
+                android:gravity="center"
+                style="@style/PrimaryButtonStyle"
+                android:stateListAnimator="@null"
+                android:text="@string/ok"
+                app:layout_constraintWidth_percent="0.5"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="@dimen/dimen20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/message" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
