@@ -24,11 +24,6 @@ android {
             minifyEnabled true
         }
 
-        maybeCreate(rootProject.ext.get("debugBuildType"))
-        getByName(rootProject.ext.get("debugBuildType")) {
-            initWith(getByName(debugBuildType))
-            matchingFallbacks += [debugBuildType]
-        }
     }
 
 
