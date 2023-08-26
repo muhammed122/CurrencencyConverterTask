@@ -66,7 +66,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen16"
                 android:backgroundTint="@color/color_app_second"
-                android:fontFamily="@font/kamashka_medium"
                 android:gravity="center"
                 style="@style/PrimaryButtonStyle"
                 android:stateListAnimator="@null"

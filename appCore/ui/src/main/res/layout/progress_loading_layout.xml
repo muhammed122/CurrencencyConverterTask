@@ -9,19 +9,16 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+    <ProgressBar
         android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:trailingcircular_animDelay="200"
-        app:trailingcircular_animDuration="1200"
-        app:trailingcircular_bigCircleRadius="@dimen/dimen20"
-        app:trailingcircular_dotsColor="@color/color_app_second"
-        app:trailingcircular_dotsRadius="@dimen/dimen5"
-        app:trailingcircular_noOfTrailingDots="5" />
+        android:progressTint="@color/color_app_second"
+
+      />
 
     <TextView
         android:id="@+id/tvHint"

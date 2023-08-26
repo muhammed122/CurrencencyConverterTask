@@ -14,7 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "CurrencyConverterTask"
 include ':app'
-include ':core'
 include ':appCore'
 include ':appCore:network'
 include ':appCore:Config'

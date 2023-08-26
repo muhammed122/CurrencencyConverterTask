@@ -1,14 +1,13 @@
 package com.example.currencyconvertertask.presentation
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.fragment.app.viewModels
-import com.example.currencyconvertertask.R
 import com.example.currencyconvertertask.databinding.FragmentCurrencyConverterBinding
+import com.example.currencyconvertertask.domin.entity.response.CurrencySymbolsModel
 import com.example.currencyconvertertask.ui.base.BasicFragment
+import com.example.currencyconvertertask.ui.extentions.collect
+import com.example.currencyconvertertask.ui.extentions.handleApiError
+import com.qpn.kamashka.utils.network.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,4 +17,44 @@ class CurrencyConverterFragment :
     ) {
 
     override val viewModel: CurrencyConverterViewModel by viewModels()
+
+
+    override fun setupObservers() {
+        collect(viewModel.currenciesFlow) {
+            when (it) {
+                is Resource.Success -> {
+                    hideLoading()
+                    proceedSymbolsResponse(it.value)
+                }
+                is Resource.Failure -> {
+                    handleApiError(it)
+                    hideLoading()
+                }
+                is Resource.Loading -> {
+                    showLoading()
+                }
+                else -> {}
+
+            }
+        }
+    }
+
+    private fun proceedSymbolsResponse(value: CurrencySymbolsModel?) {
+        val currenciesSymbol=value?.currencies?.map { it.cur }?.toList() ?: emptyList()
+        binding.fromCountries.setAdapter(
+            ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_list_item_1,
+                currenciesSymbol
+            )
+        )
+        binding.toCountries.setAdapter(
+            ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_list_item_1,
+                currenciesSymbol
+            )
+        )
+    }
+
 }
